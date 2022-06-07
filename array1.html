@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays (inspect for comments - essentially using this as a console)
+    </h2>
+
+
+    <p id="demo"></p> 
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+
+    <script>
+        // as a starting point -- shows an array - note the brackets, not braces
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+
+        // can span multi-lines 
+        const cars2 = [
+                "Saab",
+                "Volvo",
+                "BMW"
+            ];
+        document.getElementById("demo2").innerHTML = cars2;
+
+        // You can create and empty array and then assign elements 
+
+        const cars3 = [];
+        document.getElementById("demo3").innerHTML = cars3;
+
+        cars3[0] = "Saab";
+        cars3[1] = "Volvo";
+        cars3[2] = "BMW";
+
+        document.getElementById("demo4").innerHTML = cars3;
+
+        // accessing array elements via index
+
+        document.getElementById("demo5").innerHTML = cars[0];
+
+        // changing an element in an array
+
+        cars[0] = "Opel";
+        document.getElementById("demo6").innerHTML = cars;
+        
+        // access full array - not doing this one, self explanatory - call the variable name
+
+        // Arrays are objects...  Arrays uses index numbers to access elements... objects use names to access
+        //members..
+
+        // array
+        const person = ["John", "Doe", 46];
+
+        document.getElementById("demo7").innerHTML = person[0];
+
+        // object
+
+        const person2 = {firstName:"John", lastName:"Doe", age:46};
+
+        document.getElementById("demo8").innerHTML = person2.lastName;
+
+        //Array elements can be objects or different types of variables in same array. Even functions.
+
+        const myArray = [];
+
+        myArray[0] = Date.now();
+        myArray[1] = myFunction();
+        myArray[2] = cars[0]
+        
+        function myFunction(rando){
+            rando = 'hello world';
+            return rando;
+        }
+        document.getElementById("demo9").innerHTML = myArray;
+
+        // array properties and methods 
+
+        document.getElementById("demo10").innerHTML = cars.length;
+        document.getElementById("demo11").innerHTML = cars.sort();
+
+        // accessing array elements - not doing already covered above
+
+        // accessing last array element - same but worth doing 
+
+        const fruits =  ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits[fruits.length - 1];
+
+        document.getElementById("demo12").innerHTML = fruit
+
+        //looping array element with for loop the hard way
+
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo13").innerHTML = text;
+
+        // same as last but using Array.forEach() built in function...
+
+        //reusues text variable from previous example
+        fruits.forEach(myFunc);
+        text += "<ul>";
+        
+        function myFunc(value) {
+            text += "<li>" + value + "</li>";
+        }
+
+        document.getElementById("demo14").innerHTML = text;
+
+    </script>
+
+</body>
+
+</html>
