@@ -21,6 +21,16 @@
     <p id="demo12"></p>
     <p id="demo13"></p>
     <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
 
 
     <script>
@@ -123,6 +133,74 @@
         }
 
         document.getElementById("demo14").innerHTML = text;
+
+
+        // adding array elements - push (adds element to end)
+
+        fruits.push("Lemon");
+
+        document.getElementById("demo15").innerHTML = fruits;
+
+        // adding to array with 'length' property
+
+        fruits[fruits.length] = "Mango";
+
+        document.getElementById("demo16").innerHTML = fruits;
+
+        // adding to array with length by index -- be careful to not
+        // overshoot the index. It will create undefined elements for example;
+
+        fruits[10] = "Kumquat";
+
+        document.getElementById("demo17").innerHTML = fruits;
+        //Banana,Orange,Apple,Mango,Lemon,Mango,,,,,Kumquat
+
+        document.getElementById("demo18").innerHTML = fruits[9];
+        // returns undefined
+
+        // associative arrays - or arrays with named indexes are not supported in JS. 
+        // if you try, JS will convert to object and some methods / properties will work incorrectly
+        // for example: 
+
+        const person3 = [];
+        person3["firstName"] = "John";
+        person3["lastName"] = "Doe";
+        person3["age"] = 46;
+        
+        document.getElementById("demo19").innerHTML = person3.length; // returns 0 
+        document.getElementById("demo20").innerHTML = person3[0]; // returns undefined
+
+        // how to recognize an array? I don't know why we need two methods... 
+
+        document.getElementById("demo21").innerHTML =  Array.isArray(fruits); // true
+
+        document.getElementById("demo22").innerHTML = fruits instanceof Array; // true 
+
+        // Exercises at bottom of https://www.w3schools.com/js/js_arrays.asp 
+
+        //arrays
+        // 1  - Get the value "Volvo" from the cars array.
+
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        let x = cars[1];
+
+        // 2 - change first item of cars to "Ford"
+
+        cars[0]
+
+        // 3 - Alert the number of items in an array, using the correct Array property.
+        
+        alert(cars.length);
+
+        // array methods 
+        // 1  - Use the correct Array method to remove the last item of the fruits array.
+        
+        fruits.pop();
+        
+        // 2 - Use the correct Array method to add "Kiwi" to the fruits array.
+        
+        fruits.push = ["Kiwi"]
 
     </script>
 
