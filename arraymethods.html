@@ -8,6 +8,7 @@
 
 
     <p id="demo"></p>
+    <p id="demo1"></p>
     <p id="demo2"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
@@ -35,6 +36,91 @@
 
     <script>
 
-    document.getElementById("demo21").innerHTML =
+// converting arrays to strings
 
-   
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // Array.isArray(fruits);
+        // true
+    document.getElementById("demo").innerHTML = fruits.toString();
+        // Array.isArray(fruits.toString())
+        //    false
+
+// Join also makes a string, but you can add a separator...
+
+    document.getElementById("demo1").innerHTML = fruits.join(" $$$$ ");
+
+    // Array.isArray(fruits.join);
+        // false
+
+    // typeof fruits.join();
+      //  'string'
+
+// pop and push elements into and out of an array
+    // pop = remove, 
+
+    document.getElementById("demo2").innerHTML = fruits.pop();   
+
+        // mango was popped out.  the last element in the array. The array is now Banana,Orange,Apple
+
+    //push = put into. By itself, the push method returns the new array length... to get t
+
+    document.getElementById("demo3").innerHTML = fruits.push("Mango", "Coconut");   // this adds the two elements to the end of the array, 
+    //returns new array length
+
+    document.getElementById("demo4").innerHTML = fruits;
+
+// Array shift() - works like pop but removes the first element and returns it, and shifts remaining elements down 1 index value.
+
+        // self explanatory, I understand pop, this is just the same thing but works on the first element instead.
+
+// Array unshift() - works like pus, but on the first element. returns the length of the new array. increments the index one on the other elements to make space
+        // for the additional element.
+
+// changing elements in an array - self explanatory, use the index number 
+        //ie;
+        fruits[2] = "Kumquat"; // would change the 3rd element to "Kumquat"
+
+// Array Length - easy way to append new elements to array
+
+        document.getElementById("demo5").innerHTML = fruits[fruits.length] = "Kiwi";
+        document.getElementById("demo6").innerHTML = fruits;
+
+// concatenating arrays - as many as you want.  pass multiple arrays like this - const concat multiarray = arr1.concat(arr2, arr3, ... etc)
+
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+
+    const myKids = myBoys.concat(myGirls);
+
+    document.getElementById("demo7").innerHTML = myKids;
+
+// also can concat strings --- this creates a new array, in this instance 'myChildren'
+
+    const arr1 = ["Emil", "Tobias", "Linus"];
+    const myChildren = arr1.concat("David");
+
+    document.getElementById("demo8").innerHTML = myChildren;
+
+//splicing and slicing arrays // make sure you review documentation on this method.... easy to mess up.
+
+        // splice  adds/removes  elements somewhere in the array
+
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"]; 
+
+       // document.getElementById("demo9").innerHTML = fruits2.splice(2 , 2, "Lemon", "Kiwi");
+
+        document.getElementById("demo10").innerHTML = fruits2;
+
+        // splice can remove elements without leaving holes
+
+        document.getElementById("demo11").innerHTML = fruits2.splice(0, 1); // splice 
+        document.getElementById("demo12").innerHTML = fruits2;
+
+
+
+
+
+
+
+
+    </script>
