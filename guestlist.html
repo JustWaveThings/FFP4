@@ -9,23 +9,27 @@
     <h1>Active Learning - JS - GuestList</h1>
 
     <div class="output">
-        <p class="admitted:">Admit: </p>
-        <p class="refuse:">Refused: </p>
+        <p class="admitted">Admit: </p>
+        <p class="refused">Refused: </p>
     </div>
     
     <script>
         const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
-
+   
         const admitted = document.querySelector('.admitted');
         const refused = document.querySelector('.refused');
         admitted.textContent = 'Admit: ';
         refused.textContent = 'Refuse: ';
 
-// loop starts here
 
-// refused.textContent += ;
-// admitted.textContent += ;
-
+         // loop starts here
+        for (const peopl of people){
+            if (peopl === "Phil" || peopl === "Lola"){
+                refused.textContent += `${peopl}, `;
+            } else {
+                admitted.textContent += `${peopl}, `;
+            }
+        }
 
 
     </script>
