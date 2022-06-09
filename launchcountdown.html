@@ -40,32 +40,32 @@ If the number is 0, print "Blast off!" to the paragraph.
 For any other number, print just the number to the paragraph.
 Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you don't want i++ — how do you iterate downwards? -->
 
-<h1>Active Learning - Launch Countdown</h1>
+<h1>Active Learning - JS Loops  - Launch Countdown</h1>
+
+<div class="output"></div>
 
     <script>
 
-    //   
+        const output = document.querySelector('.output');
+        output.innerHTML = "";
 
-    let output = document.querySelector('.output');
-    output.innerHTML =  ;
+        let i = 10;
 
-    let i = 10;
-
-    do {
-        if ( i === 0) {
-            para.textContent = "Blast Off!";
-        } else if (i >= 1 || i <= 10) {
-            output.appendChild(para);
-            para.textContent = i;
-        } else {
-            output.appendChild(para);
-            para.textContent = "Countdown 10";
+        while ( i >= 0 ){
+            const para = document.createElement('p');
+            if (i === 10) {
+                para.textContent = `Countdown ${i}`;
+            } else if ( i === 0 ){
+                para.textContent = 'Blast Off!';
+            } else {
+                para.textContent = i;
+            }
+        
+        output.appendChild(para);
+        
+        i--;
         }
-    output.appendChild(para);   
-    i--;
-    } while (i >= 0){
-        const para = document.createElement('p');
-    };  
+
 
     </script>
 </body>
