@@ -3,7 +3,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>"Active Learning - Countdown"</title>
+    <style> 
+        html {
+        font-family: sans-serif;
+        }
+
+        h2 {
+        font-size: 16px;
+        }
+
+        .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+        }
+
+        body {
+        margin: 10px;
+        background: #f5f9fa;
+        }
+    </style>
 </head>
 <body>
     <!-- In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blastoff. Specifically, we want you to:
@@ -19,37 +40,32 @@ If the number is 0, print "Blast off!" to the paragraph.
 For any other number, print just the number to the paragraph.
 Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you don't want i++ — how do you iterate downwards? -->
 
-html {
-font-family: sans-serif;
-}
-
-h2 {
-font-size: 16px;
-}
-
-.a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
-}
-
-body {
-margin: 10px;
-background: #f5f9fa;
-}
+<h1>Active Learning - Launch Countdown</h1>
 
     <script>
 
+    //   
+
     let output = document.querySelector('.output');
-    output.innerHTML = '';
+    output.innerHTML =  ;
 
-// let i = 10;
+    let i = 10;
 
-// const para = document.createElement('p');
-// para.textContent = ;
-// output.appendChild(para);
-
+    do {
+        if ( i === 0) {
+            para.textContent = "Blast Off!";
+        } else if (i >= 1 || i <= 10) {
+            output.appendChild(para);
+            para.textContent = i;
+        } else {
+            output.appendChild(para);
+            para.textContent = "Countdown 10";
+        }
+    output.appendChild(para);   
+    i--;
+    } while (i >= 0){
+        const para = document.createElement('p');
+    };  
 
     </script>
 </body>
